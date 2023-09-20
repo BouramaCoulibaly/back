@@ -18,6 +18,11 @@ public interface KpiDataRepository extends JpaRepository<KpiData, Long> {
     Set<String> findUniqueDbNames();
     @Query("SELECT DISTINCT k.tablename FROM KpiData k WHERE k.dbname = :dbName")
     Set<String> findRelatedTableNamesByDbName(String dbName);
+
+    @Query("SELECT DISTINCT k.tablename FROM KpiData k WHERE k.dbname = :dbName")
+    List<String> findRelatedTableNamesByDbName2(String dbName);
+    @Query("SELECT DISTINCT k FROM KpiData k WHERE k.tablename = :tabName")
+    List<KpiData> findRelatedKpiByTabName(String tabName);
    /* @Query("SELECT DISTINCT k.exportday FROM KpiData k")
     Set<String> findUniqueExportDays();*/
     @Query("SELECT DISTINCT k.exportday FROM KpiData k")

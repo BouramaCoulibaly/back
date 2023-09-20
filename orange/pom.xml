@@ -14,7 +14,7 @@
 	<name>orange</name>
 	<description>KPIS project for Spring Boot</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -85,6 +85,12 @@
 			<groupId>org.springframework.integration</groupId>
 			<artifactId>spring-integration-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.funpad</groupId>
+			<artifactId>excel-object-mapper</artifactId>
+			<version>2.0.0</version>
 		</dependency>
 	</dependencies>
 
